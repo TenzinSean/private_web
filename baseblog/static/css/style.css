@@ -1,6 +1,53 @@
+
+/* font type */
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+
+/* Header */
 .image-display {
   background-image: url("../img/tibet-everest.jpg");
   background-position: center;
   background-repeat: no-repeat;
   height: 600px;
+  background-size: cover;
+}
+
+
+header li a {
+  color: white;
+  letter-spacing: 2px;
+  font-family: 'Nunito', sans-serif;
+}
+
+header li a:hover {
+    transition: border-bottom 300ms ease-in-out;
+    color: red;
+}
+
+header h2 {
+  letter-spacing: 2px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+}
+
+.button-header {
+  position: absolute;
+  left: 10%;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 6px -6px black;
+  font-family: 'Nunito', sans-serif;
+}
+
+
+/* second page */
+.second-image {
+  display: block;
+  background-image: url("../img/jack.jpg");
+  height: 500px;
+  width: 750px;
+  background-size: center;
+  background-repeat:no-repeat;
 }

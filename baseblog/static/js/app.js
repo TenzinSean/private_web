@@ -1,8 +1,4 @@
 $(document).ready(function() {
-  alert("hello");
-});
-
-
-$('button').on('click', function() {
-  console.log("Hello there");
+  console.log("server uo");
+  $(this).css("background", "red");
 });
