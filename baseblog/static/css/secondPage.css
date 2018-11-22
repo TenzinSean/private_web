@@ -1,0 +1,14 @@
+/* second page */
+.sidenav {
+  background-image: url("../img/jack.jpg");
+  height: 550px;
+  width: 350px;
+  background-size: center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+
+.content-second {
+  background-color: #bdc3c7;
+}

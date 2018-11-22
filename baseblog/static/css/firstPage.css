@@ -9,7 +9,7 @@
   background-image: url("../img/tibet-everest.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 600px;
+  height: 750px;
   background-size: cover;
 }
 
@@ -41,13 +41,13 @@ header h2 {
   font-family: 'Nunito', sans-serif;
 }
 
+/* Media query */
+@media (min-width: 576px) {
+  .image-display {
+    background-size: cover;
+  }
 
-/* second page */
-.second-image {
-  display: block;
-  background-image: url("../img/jack.jpg");
-  height: 500px;
-  width: 750px;
-  background-size: center;
-  background-repeat:no-repeat;
+  header li a {
+    text-align: center;
+  }
 }

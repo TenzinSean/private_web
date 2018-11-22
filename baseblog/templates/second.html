@@ -1,9 +1,23 @@
 {% extends 'base.html' %}
 
+
 {% block content %}
-<main>
-  <div class="second-image">
-    <h1 class="display-5 text-white ml-5 pt-5">Tenzin Sean</h1>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/secondPage.css' %}">
+  <div class="container-fluid text-center content-second">
+    <div class="row">
+    <div class="container">
+      <div class="row content justify-content-center">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 sidenav text-white mt-5 border border-white">
+          <h2 class="display-4 mt-5 text-left">Tenzin Sean</h2>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6 text-left  text-black mt-5 text-center">
+          <h1 class="mt-5 display-4">Welcome to Tenzin</h1>
+          <p class="mt-4 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, ab.</p>
+          <a href="{% url 'story' %}"><button class="btn btn-danger mt-4">HEAR ME MORE</button></a>
+        </div>
+        </div>
+      </div>
+    </div>
   </div>
-</main>
-{% endblock %}
+{% endblock content %}
