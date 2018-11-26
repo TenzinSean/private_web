@@ -18,11 +18,11 @@
         <div class="row">
           <div class="col">
             <ul class="nav justify-content-end mt-4 hidden-xs-down">
-              <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Story</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Protofilo</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
-              <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="{% url 'story' %}" class="nav-link">Story</a></li>
+              <li class="nav-item"><a href="{% url 'portfilo' %}" class="nav-link">Protofilo</a></li>
+              <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projects</a></li>
+              <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-link">Contact</a></li>
             </ul>
           </div>
         </div>
@@ -38,9 +38,55 @@
   </div>
 </header>
 <!-- second part -->
-{% block content %}
+<div id="content">
+  {% block content %}
 
-{% endblock content %}
+  {% endblock %}
+</div>
+
+<!-- sidebar -->
+<div class="platte mt-4 mb-4">
+  <div class="jumbotron jumbotron-fluid bg-dark text-center">
+  <h2 class="display-4 text-white">
+    "Happiness is key in the life"
+  </h2>
+  <p class="lead text-white">You must find from inner but not looking outside</p>
+  <hr class="my-4">
+  <p class="small text-white">"By The Dalai Lama"</p>
+</div>
+</div>
+
+<div id="story" class="third-page">
+  {% block story %}
+  <div class="header-passion mt-4 mb-4">
+    <h1 class="text-center display-4">Passion and Skills</h1>
+  </div>
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+        {% for post in object_list %}
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{ post.image.url }}" alt="image">
+          <div class="card-body">
+            <h2> {{ post.title }}</h2>
+            <p class="card-text">{{ post.body }}</p>
+          </div>
+          <br/>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-6">
+        <h2>Whats up</h2>
+      </div>
+    </div>
+  </div>
+  {% endblock %}
+</div>
+
+
+{% block footer %}
+      This is footer
+{% endblock %}
 
   <!-- javascript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

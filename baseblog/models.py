@@ -7,7 +7,7 @@ from django.db import models
 class Blog(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
-    image = models.ImageField(upload_to = 'pic_folder/', default = 'pic_folder/None/no-img.jpg')
+    image = models.ImageField(upload_to = 'pic_folder/')
 
 
     def __str__(self):
