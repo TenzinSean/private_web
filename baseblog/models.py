@@ -12,3 +12,23 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Travel(models.Model):
+    pass
+
+
+class PhotoCollection(models.Model):
+    pass
+
+
+class StoryModel(models.Model):
+    pass
+
+
+class Portofilo(models.Model):
+    pass
+
+
+class Projects(models.Model):
+    pass
