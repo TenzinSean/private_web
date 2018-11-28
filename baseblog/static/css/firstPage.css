@@ -59,3 +59,17 @@ header h2 {
 .platte {
   background-color: pink;
 }
+
+/* Side Pic */
+.sideImage {
+  width: 550px;
+  height: 450px;
+  background-image: url('../img/sidepic.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sideImage h1 {
+  padding-top: 85px;
+}
