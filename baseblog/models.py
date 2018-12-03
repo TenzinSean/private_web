@@ -15,7 +15,12 @@ class Blog(models.Model):
 
 
 class Travel(models.Model):
-    pass
+    label = models.CharField(max_length=255)
+    content = models.TextField()
+    pic = models.ImageField(upload_to = 'pic_folder/')
+
+    def __str__(self):
+        return self.title
 
 
 class PhotoCollection(models.Model):
