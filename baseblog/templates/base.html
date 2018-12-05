@@ -9,6 +9,9 @@
   <!-- bootstrapp -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/firstPage.css' %}">
+
+  <!-- font icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <!-- header -->
@@ -22,7 +25,10 @@
               <li class="nav-item"><a href="{% url 'story' %}" class="nav-link">Story</a></li>
               <li class="nav-item"><a href="{% url 'portfilo' %}" class="nav-link">Protofilo</a></li>
               <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projects</a></li>
+              <li class="nav-item"><a href="{% url 'travel' %}" class="nav-link">Travel</a></li>
               <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-link">Contact</a></li>
+              <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log-in</a></li>
+
             </ul>
           </div>
         </div>
@@ -45,55 +51,54 @@
 </div>
 
 <!-- Footer -->
-<footer class="page-footer font-small bg-dark pt-4 text-white">
+<footer class="page-footer font-small pt-4 text-white">
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
       <!-- Grid row -->
       <div class="row">
-
         <!-- Grid column -->
         <div class="col-md-6 mt-md-0 mt-3">
-
           <!-- Content -->
           <h2 class="text-uppercase ml-4">Tenzin Sean</h2>
           <p class="small ml-4">Here you can use rows and columns here to organize your footer content.</p>
-          
         </div>
         <!-- Grid column -->
-
         <hr class="clearfix w-100 d-md-none pb-3">
-
-
           <!-- Grid column -->
           <div class="col-md-3 mb-md-0 mb-3">
-
             <!-- Links -->
-            <h4 class="text-uppercase">CONTACT</h4>
-
-            <ul class="list-unstyled">
-              <li>
-                <a href="#!">Link 1</a>
-              </li>
-              <li>
-                <a href="#!">Link 2</a>
-              </li>
-              <li>
-                <a href="#!">Link 3</a>
-              </li>
-              <li>
-                <a href="#!">Link 4</a>
-              </li>
-            </ul>
-
+            <h4 class="text-uppercase">Media</h4>
+            <div class="mt-4">
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <a href="#!" class="fa fa-facebook text-danger"></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#!" class="fa fa-instagram text-danger"></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#!" class="fa fa-snapchat-ghost text-danger"></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#!" class="fa fa-google text-danger"></a>
+                  </li>
+                </ul>
+              </div>
           </div>
           <!-- Grid column -->
-
+          <div class="col-md-3 mb-md-0 mb-3">
+            <!-- Links -->
+            <h4 class="text-uppercase">CONTACT</h4>
+            <div class="mt-4">
+              <span>Gantristrasse 12</span><br/>
+              <span>Zollikofen, Bern</span>
+              <span>3052, Switzerland</span>
+            </div>
+          </div>
       </div>
       <!-- Grid row -->
-
     </div>
     <!-- Footer Links -->
-
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3 mt-4">© 2018 Copyright:
       <a href="https://mdbootstrap.com/education/bootstrap/"> tenzinsean.com</a>

@@ -20,7 +20,7 @@ class Travel(models.Model):
     pic = models.ImageField(upload_to = 'pic_folder/')
 
     def __str__(self):
-        return self.title
+        return self.label
 
 
 class PhotoCollection(models.Model):
