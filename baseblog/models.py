@@ -28,7 +28,12 @@ class PhotoCollection(models.Model):
 
 
 class StoryModel(models.Model):
-    pass
+    titre = models.CharField(max_length=255)
+    context = models.TextField()
+    pic = models.ImageField(upload_to = 'pic_folder/')
+
+    def __str__(self):
+        return self.titre
 
 
 class Portofilo(models.Model):

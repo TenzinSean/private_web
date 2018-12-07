@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h1>hi</h1>
+  {% for post in object_list %}
+    <h1>{{ post.titre }}</h1>
+    <p>{{ post.context }}</p>
+    <img class="card-img-top" src="{{ post.pic.url }}" alt="Card image cap" width="50px">
+  {% endfor %}
 {% endblock  %}
