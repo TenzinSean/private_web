@@ -12,31 +12,36 @@
 
   <!-- font icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 </head>
 <body>
   <!-- header -->
   <header>
     <div class="image-display">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-end">
           <div class="col">
-            <ul class="nav justify-content-end mt-4 hidden-xs-down">
+            <ul class="nav mt-5 mr-2 d-none d-sm-none d-md-inline-flex float-right nav-bar-menu">
               <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="{% url 'story' %}" class="nav-link">Story</a></li>
               <li class="nav-item"><a href="{% url 'portfilo' %}" class="nav-link">Protofilo</a></li>
-              <li class="nav-item"><a href="{% url 'projects' %}" class="nav-link">Projects</a></li>
               <li class="nav-item"><a href="{% url 'travel' %}" class="nav-link">Travel</a></li>
               <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log-in</a></li>
-
             </ul>
+            <i class="fas fa-bars mt-5 mr-2 float-right text-danger d-md-none d-lg-none drop-down"></i>
           </div>
         </div>
         <div class="row">
           <div class="col">
             <h2 class="text-white ml-4 mt-5">Truth won't kill </h2>
             <h2 class="text-white ml-4">by the weapons</h2>
-            <button class="btn btn-danger mt-4 button-header">HEAR US</button>
+            <div class="button-items">
+              <button class="btn btn-danger mt-4 button-header">HEAR US</button>
+            </div>
           </div>
       <!--<img src="{% static "img/tibet-everest.jpg" %}" alt="tibet-image"/>-->
     </div>
