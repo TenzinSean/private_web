@@ -1,3 +1,3 @@
 $('.drop-down').click(function() {
-  $(this).addClass("menu-items-show");
+  $(this).toggleClass('nav-bar-menu');
 })

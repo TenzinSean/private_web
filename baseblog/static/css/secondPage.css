@@ -2,8 +2,27 @@
 .sidenav {
   background-image: url("../img/jack.jpg");
   height: 550px;
-  width: 350px;
   background-size: center;
   background-repeat:no-repeat;
   background-size: cover;
+}
+/* Mobile*/
+@media(min-width: 576px) {
+   .sidenav {
+     width: 550px;
+   }
+}
+
+/* Tabelt */
+@media(min-width: 768px) {
+  .sidenav {
+    width: 850px;
+  }
+}
+
+.sidenav:hover {
+  cursor: pointer;
+  transform: scale 1s;
+  transition: transform 500ms ease-in;
+  opacity: 0.90;
 }
