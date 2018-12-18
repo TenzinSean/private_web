@@ -139,4 +139,13 @@ MEDIA_URL = '/media/'
 
 # Authentication
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = 'home' 
+LOGOUT_REDIRECT_URL = 'home'
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'tenzin.jeunesse@gmail.com'
+EMAIL_HOST_PASSWORD = 'Savetibet1'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
