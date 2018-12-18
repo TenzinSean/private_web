@@ -29,6 +29,7 @@ class PhotoCollection(models.Model):
 
 class StoryModel(models.Model):
     titre = models.CharField(max_length=255)
+    sub_titre = models.CharField(max_length=30)
     context = models.TextField()
     pic = models.ImageField(upload_to = 'pic_folder/')
 

@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/storyPage.css' %}">
 {% block content %}
   {% for post in object_list %}
-    <h1>{{ post.titre }}</h1>
-    <p>{{ post.context }}</p>
-    <img class="card-img-top" src="{{ post.pic.url }}" alt="Card image cap" width="50px">
+  <div class="mt-5 text-center">
+    <h2 class="text-center mb-5 text-uppercase text-danger">{{ post.titre }}</h2>
+        <img class="card-img-top full-pic mb-4" src="{{ post.pic.url }}" alt="Card image cap" style="display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;">
+    <h3 class="lead">{{ post.sub_titre }}</h3>
+    <p class="mt-5 text-center">{{ post.context }}</p>
+  </div>
   {% endfor %}
 {% endblock  %}
