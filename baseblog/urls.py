@@ -10,6 +10,8 @@ from .views import (
                 LogIn,
                 )
 
+from . import views
+
 
 urlpatterns = [
     path('', HomePage.as_view(), name='home'),
@@ -19,4 +21,6 @@ urlpatterns = [
     path('travel/', Travel.as_view(), name='travel'),
     path('Contact/', Contact.as_view(), name='contacts'),
     path('Login/', LogIn.as_view(), name='login'),
+    path('<int:post_id>/share/', views.post_share, name='post_share'),
+
 ]
