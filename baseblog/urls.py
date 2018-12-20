@@ -12,7 +12,6 @@ from .views import (
 
 from . import views
 
-
 urlpatterns = [
     path('', HomePage.as_view(), name='home'),
     path('story/', StoryPage.as_view(), name='story'),
@@ -22,5 +21,4 @@ urlpatterns = [
     path('Contact/', Contact.as_view(), name='contacts'),
     path('Login/', LogIn.as_view(), name='login'),
     path('<int:post_id>/share/', views.post_share, name='post_share'),
-
 ]

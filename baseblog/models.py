@@ -28,6 +28,9 @@ class PhotoCollection(models.Model):
     pass
 
 
+class Contact(models.Model):
+    pass
+
 class StoryModel(models.Model):
     titre = models.CharField(max_length=255)
     sub_titre = models.CharField(max_length=30)
