@@ -1,8 +1,9 @@
 from django import forms
 
 
-class EmailPostForm(forms.Form):
+class ContactForm(forms.Form):
     name = forms.CharField(max_length=25)
-    email = forms.EmailField()
+    email = forms.EmailField(required=True)
     to = forms.EmailField()
-    comments = forms.CharField(required=False, widget=forms.Textarea)
+    subject = forms.CharField(required=True)
+    comments = forms.CharField(widget=forms.Textarea, required=True)

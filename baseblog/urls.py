@@ -1,4 +1,5 @@
 from django.urls import path
+from django.views.generic.base import TemplateView
 
 from .views import (
                 HomePage,
@@ -8,6 +9,8 @@ from .views import (
                 Travel,
                 Contact,
                 LogIn,
+                emailView,
+                successView
                 )
 
 from . import views
@@ -18,7 +21,8 @@ urlpatterns = [
     path('portfilo/', Portfilo.as_view(), name='portfilo'),
     path('projects/', Projects.as_view(), name='projects'),
     path('travel/', Travel.as_view(), name='travel'),
-    path('Contact/', Contact.as_view(), name='contacts'),
+    path('Contact/', emailView, name='contacts'),
+    path('success/', successView, name='success'),
     path('Login/', LogIn.as_view(), name='login'),
-    path('<int:post_id>/share/', views.post_share, name='post_share'),
+    path('loginone/', TemplateView.as_view(template_name='home.html')),
 ]
