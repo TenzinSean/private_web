@@ -41,6 +41,24 @@ class StoryModel(models.Model):
         return self.titre
 
 
+class Pola(models.Model):
+    chaptre = models.CharField(max_length=255)
+    title_chap = models.CharField(max_length=255)
+    contenu = models.TextField()
+    pic_one = models.ImageField(upload_to = 'pic_folder/')
+
+    def __str__(self):
+        return self.chaptre
+
+class Family(models.Model):
+    chaptre1 = models.CharField(max_length=255)
+    title_chap1 = models.CharField(max_length=255)
+    contenu1 = models.TextField()
+    pic_two = models.ImageField(upload_to = 'pic_folder/')
+
+    def __str__(self):
+        return self.chaptre1
+
 class Portofilo(models.Model):
     pass
 

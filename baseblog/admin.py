@@ -6,6 +6,8 @@ from .models import (
                 StoryModel,
                 Portofilo,
                 Projects,
+                Pola,
+                Family
                 )
 
 # Register your models here.
@@ -17,3 +19,5 @@ admin.site.register(PhotoCollection)
 admin.site.register(StoryModel)
 admin.site.register(Portofilo)
 admin.site.register(Projects)
+admin.site.register(Pola)
+admin.site.register(Family)

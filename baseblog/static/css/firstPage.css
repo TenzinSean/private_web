@@ -53,6 +53,14 @@ header h2 {
   }
 }
 
+.add-table {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: block;
+}
 .button-header {
   position: absolute;
   left: 10%;
@@ -109,6 +117,20 @@ header h2 {
   header li a {
     text-align: center;
   }
+}
+
+.svg-size {
+  fill: red;
+  width: 35px;
+  height: 45px;
+}
+
+/* side bar shown */
+.nav-bar-tight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
 }
 
 /* Third Page */

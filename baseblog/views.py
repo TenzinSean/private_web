@@ -34,7 +34,7 @@ class Contact(TemplateView):
     template_name = 'contact.html'
 
 
-
+# Contact form 
 def emailView(request):
     sent = False
 
