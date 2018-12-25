@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from django.views.generic import ListView, TemplateView
-from .models import Blog, Travel, StoryModel
+from django.views.generic import ListView, TemplateView, CreateView
+from .models import Blog, Travel, StoryModel, Pola, Family
 from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError # email set up
 from django.http import HttpResponse, HttpResponseRedirect
-
+from django.urls import reverse_lazy
 
 # Create your views here.
 class HomePage(ListView):
@@ -33,8 +33,7 @@ class Travel(ListView):
 class Contact(TemplateView):
     template_name = 'contact.html'
 
-
-# Contact form 
+# Contact form
 def emailView(request):
     sent = False
 
@@ -54,6 +53,25 @@ def emailView(request):
 
 def successView(request):
     return HttpResponse('Success! Thank you for you messagae')
-
+#Authentication
 class LogIn(TemplateView):
     template_name = 'login.html'
+
+#Pola
+class PolaStory(ListView):
+    model = Pola
+    template_name ='Pola/chaptre1.html'
+# Chaptre 1
+class Chaptre1(ListView):
+    model = Pola
+    template_name = 'Pola/Detail/chaptreFull.html'
+
+#Chabdeltsang
+class FamilyStory(ListView):
+    model = Family
+    template_name = 'Chabdeltsang/chaptre.html'
+
+# Chaptre1
+class ChaptreChab1(ListView):
+    model = Family
+    template_name = 'Chabdeltsang/Detail/chaptreFull.html'

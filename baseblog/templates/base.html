@@ -24,13 +24,22 @@
       <div class="container-fluid">
         <div class="row justify-content-end">
           <div class="col">
-            <ul class="nav mt-5 mr-2 d-none d-sm-none d-md-inline-flex float-right" id="menu-page">
+            <ul class="nav mt-5 mb-5 mr-3 d-none d-sm-none d-md-inline-flex float-right" id="menu-page">
               <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
               <li class="nav-item"><a href="{% url 'story' %}" class="nav-link">Story</a></li>
               <li class="nav-item"><a href="{% url 'portfilo' %}" class="nav-link">Protofilo</a></li>
               <li class="nav-item"><a href="{% url 'travel' %}" class="nav-link">Travel</a></li>
               <li class="nav-item"><a href="{% url 'contacts' %}" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">Log-in</a></li>
+              <li class="nav-item"><a href="{% url 'login' %}" class="nav-link">
+                <span>{% if user.is_authenticated %}
+                        <p class="text-danger font-weight-bold">Hi {{ user.username }}!</p>
+                      {% else %}
+                        <button class="btn btn-primary btn-md mt-0">Log in</button>
+                      {% endif %}
+                </span>
+              </a></li>
+              <li class="nav-item"><a href="{% url 'signup' %}" class="nav-link">
+              <button class="btn btn-primary btn-md mt-0">Sign up</button></a></li>
             </ul>
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" class="svg-size mt-5 mr-3 float-right d-md-none d-lg-none drop-down">
             <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>

@@ -1,6 +1,5 @@
 from django.urls import path
 from django.views.generic.base import TemplateView
-
 from .views import (
                 HomePage,
                 StoryPage,
@@ -10,9 +9,12 @@ from .views import (
                 Contact,
                 LogIn,
                 emailView,
-                successView
+                successView,
+                PolaStory,
+                FamilyStory,
+                Chaptre1,
+                ChaptreChab1
                 )
-
 from . import views
 
 urlpatterns = [
@@ -24,5 +26,8 @@ urlpatterns = [
     path('Contact/', emailView, name='contacts'),
     path('success/', successView, name='success'),
     path('Login/', LogIn.as_view(), name='login'),
-    path('loginone/', TemplateView.as_view(template_name='home.html')),
+    path('pola/', PolaStory.as_view(), name='pola'),
+    path('PolaChap1/', Chaptre1.as_view(), name="polaChap1"),
+    path('family/', FamilyStory.as_view(), name='family'),
+    path('familyChap1/', ChaptreChab1.as_view(), name="chabChap1"),
 ]

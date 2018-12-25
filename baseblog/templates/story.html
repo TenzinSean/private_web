@@ -13,7 +13,11 @@
     <p class="mt-5 text-center">{{ post.context }}</p>
   </div>
   <div class="text-center mb-5">
-    <button class="btn btn-primary btn-md px-5 font-weight-bold">DETAILS BIOGRAPHY</button>
+    {% if post.sub_titre == "CHABDELTSANG" %}
+      <a href="{% url 'family' %}"><button class="btn btn-primary btn-md px-5 font-weight-bold">DETAILS BIOGRAPHY</button></a>
+    {% else %}
+      <a href="{% url 'pola' %}"><button class="btn btn-primary btn-md px-5 font-weight-bold">DETAILS BIOGRAPHY</button></a>
+    {% endif %}
   </div>
   {% endfor %}
 {% endblock  %}

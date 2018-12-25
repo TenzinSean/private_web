@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Chaptre Tears in Tibet {% endblock %}
+
+{% block content %}
+<h1 class="display-3 text-center mt-4 mb-5">Tears in Tibet</h1>
+{% for post in object_list %}
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col">
+        <img class="card-img-top" src="{{ post.pic_two.url }}" alt="Card image cap" width="298px">
+        <h2 class="card-title mt-5">{{ post.chaptre1 }}</h2>
+        <p class="lead mt-5">{{ post.title_chap1 }}</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+{% endblock %}
