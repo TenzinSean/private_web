@@ -75,3 +75,5 @@ class FamilyStory(ListView):
 class ChaptreChab1(ListView):
     model = Family
     template_name = 'Chabdeltsang/Detail/chaptreFull.html'
+
+# Comment
