@@ -13,7 +13,7 @@ from .views import (
                 PolaStory,
                 FamilyStory,
                 Chaptre1,
-                ChaptreChab1
+                ChaptreChab1,
                 )
 from . import views
 
@@ -25,7 +25,8 @@ urlpatterns = [
     path('travel/', Travel.as_view(), name='travel'),
     path('Contact/', emailView, name='contacts'),
     path('success/', successView, name='success'),
-    path('Login/', LogIn.as_view(), name='login'),
+    #path('Login/', LogIn.as_view(), name='login'),
+    path('secret/', views.secret_page, name='secret'),
     path('pola/', PolaStory.as_view(), name='pola'),
     path('PolaChap1/', Chaptre1.as_view(), name="polaChap1"),
     path('family/', FamilyStory.as_view(), name='family'),

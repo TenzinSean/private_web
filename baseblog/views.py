@@ -5,6 +5,8 @@ from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError # email set up
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
+from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 
 # Create your views here.
 class HomePage(ListView):
@@ -77,3 +79,9 @@ class ChaptreChab1(ListView):
     template_name = 'Chabdeltsang/Detail/chaptreFull.html'
 
 # Comment
+
+
+# Protected views
+@login_required
+def secret_page(request):
+    return render(request, 'secret_page.html')

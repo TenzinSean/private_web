@@ -22,8 +22,8 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
-    path('accounts/', include('django.contrib.auth.urls'), name='firstlog'),
+    path('accounts/', include('django.contrib.auth.urls')),
     path('', include('baseblog.urls'),
     ),
-    path('new/', TemplateView.as_view(template_name='home.html'), name='login'),
+    #path('new/', TemplateView.as_view(template_name='home.html'), name='login'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
