@@ -81,6 +81,7 @@ class ChaptreChab1(ListView):
 # Comment
 
 
+
 # Protected views
 @login_required
 def secret_page(request):

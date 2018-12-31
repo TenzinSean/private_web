@@ -8,6 +8,7 @@ from .models import (
                 Projects,
                 Pola,
                 Family,
+                Comment,
                 )
 
 # Register your models here.
@@ -21,3 +22,10 @@ admin.site.register(Portofilo)
 admin.site.register(Projects)
 admin.site.register(Pola)
 admin.site.register(Family)
+
+
+admin.site.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'post', 'created', 'active')
+    list_filter = ('active', 'created', 'update')
+    search_fields = ('name', 'email', 'body')
