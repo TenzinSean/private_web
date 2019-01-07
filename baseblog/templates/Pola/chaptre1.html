@@ -5,24 +5,25 @@
 {% block content %}
 
 <h2 class="display-4 text-center mt-5 mb-5">My beloved grand father Tsetan Namgyal</h2>
-{% for post in object_list %}
-<div class="container mt-4 mb-5">
-  <div class="row">
-    <div class="col">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="{{ post.pic_one.url }}" alt="Card image cap" width="298px">
-        <div class="card-body">
-          <h2 class="card-title">{{ post.chaptre }}</h2>
-          <h4 class="lead">{{ post.title_chap }}</h4>
-          <a href="{% url "polaChap1" %}" class="btn btn-primary">Go somewhere</a>
+    {% for post in object_list %}
+      {% if post.title_chap == "The life of noble family in 1950" %}
+        <div class="container mt-4 mb-5">
+          <div class="row">
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{ post.pic_one.url }}" alt="Card image cap" width="298px">
+                <div class="card-body">
+                  <h2 class="card-title">{{ post.chaptre }}</h2>
+                  <h4 class="lead">{{ post.title_chap }}</h4>
+                  <a href="{% url "polaChap1" %}" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <hr>
+        {% else %}
+            <p>Page is not Found</p>
         </div>
-      </div>
-    </div>
-
-    <hr>
-  
-
-</div>
-{% endfor %}
+        {% endif %}
+    {% endfor %}
 
 {% endblock %}
