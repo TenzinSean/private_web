@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'baseblog.apps.BaseblogConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'jquery',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser' #new
