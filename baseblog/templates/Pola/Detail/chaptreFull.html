@@ -5,14 +5,14 @@
 {% block content %}
   <h1 class="display-3 text-center mt-4 mb-5">Tears in Tibet</h1>
   {% for post in object_list %}
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col">
-          <img class="card-img-top" src="{{ post.pic_one.url }}" alt="Card image cap" width="298px">
-          <h1 class="card-title mt-4">{{ post.chaptre }}</h1>
-          <h4 class="lead mt-5">{{ post.title_chap }}</h4>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col">
+            <img class="card-img-top" src="{{ post.pic_one.url }}" alt="Card image cap" width="298px">
+            <h1 class="card-title mt-4">{{ post.chaptre }}</h1>
+            <h4 class="lead mt-5">{{ post.title_chap }}</h4>
+          </div>
         </div>
       </div>
-    </div>
   {% endfor %}
 {% endblock %}
