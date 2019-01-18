@@ -14,6 +14,10 @@
           </div>
         </div>
       </div>
+      <form action="{% url 'like_post' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="post_id" value="{{ post.id }}" class="btn btn-success">likes</button>
+      </form>
   {% endfor %}
 
   {% with comments.count as total_comments %}

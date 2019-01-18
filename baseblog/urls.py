@@ -31,4 +31,5 @@ urlpatterns = [
     path('PolaChap1/', Chaptre1.as_view(), name="polaChap1"),
     path('family/', FamilyStory.as_view(), name='family'),
     path('familyChap1/', ChaptreChab1.as_view(), name="chabChap1"),
+    path('like/', views.like_post, name='like_post'),
 ]

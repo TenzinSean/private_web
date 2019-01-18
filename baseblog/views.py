@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.generic import ListView, TemplateView, CreateView
-from .models import Blog, Travel, StoryModel, Pola, Family, Comment
-from .forms import ContactForm, CommentForm
+from .models import Blog, Travel, StoryModel, Pola, Family
+from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError # email set up
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse_lazy
@@ -78,33 +78,10 @@ class ChaptreChab1(ListView):
     model = Family
     template_name = 'Chabdeltsang/Detail/chaptreFull.html'
 
-# Comment
-def post_detail(request, year, month, daty, post):
-    post = get_object_or_404(Pola, slug=post,
-                                   status='published',
-                                   publish__year=year,
-                                   publish__month=month,
-                                   publish__day=day)
-
-    # List of active comments for this post
-    comments = post.comments.filter(active=True)
-
-    new_comment = None
-
-    if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
-        if comment_form.is_valid():
-            new_comment = comment_form.save(commit=False)
-            new_comment.post = post
-            new_comment.save()
-    else:
-        comment_form = CommentForm()
-    return render(request,
-                 'Pola/Detail/chaptreFull.html',
-                 {'post' : post,
-                 'comments' : comments,
-                 'new_comment' : new_comment,
-                 'comment_form' : comment_form})
+def like_post(request):
+    post = get_object_or_404(Pola, id=float(request.POST.get('post_id')))
+    post.likes.add(request.user)
+    return HttpResponseRedirect(post.get_absolute_url())
 
 
 

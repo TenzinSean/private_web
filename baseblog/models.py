@@ -43,30 +43,17 @@ class StoryModel(models.Model):
 
 
 class Pola(models.Model):
-    chaptre = models.CharField(max_length=255)
+    chaptre = models.CharField(max_length=255) # title
     title_chap = models.CharField(max_length=255)
     contenu = models.TextField()
+    likes = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name = 'likes', blank=True)
     pic_one = models.ImageField(upload_to = 'pic_folder/')
 
     def __str__(self):
         return self.chaptre
 
+# comments
 
-class Comment(models.Model):
-    post = models.ForeignKey(Pola, on_delete=models.CASCADE, related_name='comments')
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    bodytime = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
-    active = models.BooleanField(default=True)
-
-
-    class Meta:
-        ordering = ('created',)
-
-    def __str__(self):
-        return 'Comment by {} on {}'.format(self.name, self.post)
 
 class Family(models.Model):
     chaptre1 = models.CharField(max_length=255)
