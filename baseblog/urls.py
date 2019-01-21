@@ -12,7 +12,6 @@ from .views import (
                 successView,
                 PolaStory,
                 FamilyStory,
-                Chaptre1,
                 ChaptreChab1,
                 )
 from . import views
@@ -28,7 +27,8 @@ urlpatterns = [
     #path('Login/', LogIn.as_view(), name='login'),
     path('secret/', views.secret_page, name='secret'),
     path('pola/', PolaStory.as_view(), name='pola'),
-    path('PolaChap1/', Chaptre1.as_view(), name="polaChap1"),
+    #path('PolaChap1/', Chaptre1.as_view(), name="polaChap1"),
+    path('PolaChap1/', views.post_detail, name='polaChap1'),
     path('family/', FamilyStory.as_view(), name='family'),
     path('familyChap1/', ChaptreChab1.as_view(), name="chabChap1"),
     path('like/', views.like_post, name='like_post'),
